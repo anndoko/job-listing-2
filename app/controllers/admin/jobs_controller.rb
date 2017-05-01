@@ -5,6 +5,12 @@ class Admin::JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+
+    # google map
+    @hash = Gmaps4rails.build_markers(@job) do |job, marker|
+      marker.lat job.latitude
+      marker.lng job.longitude
+    end
   end
 
   def index

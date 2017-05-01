@@ -19,6 +19,16 @@
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+
+// Google Map
+#map{
+    width:80%;
+    height:250px;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /****** LOGIN MODAL ******/
 .loginmodal-container {
     padding: 30px;
