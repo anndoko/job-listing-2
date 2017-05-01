@@ -6,6 +6,12 @@ class Job < ApplicationRecord
 
   has_many :resumes
 
+
+  # geocoder
+  geocoded_by :address
+  after_validation :geocode
+
+
   def publish!
     self.is_hidden = false
     self.save
